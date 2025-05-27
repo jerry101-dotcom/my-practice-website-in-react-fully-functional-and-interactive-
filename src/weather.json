@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 5.2304,
+    "lat": 7.4975
+  },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 295.31,
+    "feels_like": 296.14,
+    "temp_min": 295.31,
+    "temp_max": 295.31,
+    "pressure": 1012,
+    "humidity": 98,
+    "sea_level": 1012,
+    "grnd_level": 969
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.48,
+    "deg": 229,
+    "gust": 4.49
+  },
+  "clouds": {
+    "all": 99
+  },
+  "dt": 1746827447,
+  "sys": {
+    "country": "NG",
+    "sunrise": 1746768154,
+    "sunset": 1746812910
+  },
+  "timezone": 3600,
+  "id": 2338287,
+  "name": "Ikere-Ekiti",
+  "cod": 200
+}
