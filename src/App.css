@@ -87,6 +87,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-self: center;
+    gap: 150px;
 }
 
 .hero-section{
@@ -95,7 +96,7 @@ main{
     width: 100%;
     height: 660px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
     flex-wrap: wrap;
@@ -107,7 +108,6 @@ main{
     gap: 30px;
     width: 600px;
     color: white;
-    padding-left: 6em;
   
     
 }
@@ -133,10 +133,161 @@ main{
 }
 
 .hero-section img{
-    width: 400px;
+    width: 300px;
     position: relative;
-    bottom: -10%;
+    bottom: -20%;
+    background-color: #bd5139;
+    box-shadow: 10px -10px 100px 10px hsl(11, 96%, 28%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.skills-section{ 
+    height: 700px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 48.7%);
+    grid-template-rows:1fr 1fr;
+    grid-gap:30px;
+}
+
+.skills-section a{
+    text-decoration: none;
+    color: white;
+   
+}
+.skills-section a .image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+   
+}
+
+.image-overlay{
+    background: black;
+    opacity: 0.6;
+    height: 100.1%;
+    width: 100%;
+    position: relative; 
+    top: -114.3%;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.image-overlay-app{
+    background: black;
+    opacity: 0.6;
+    height: 100.1%;
+    width: 100%;
+    position: relative; 
+    top: -130%;
+    z-index: 0;
+    border-radius: 20px;
+
+}
+
+.image-overlay-graphics{
+    background: black;
+    opacity: 0.6;
+    height: 100.1%;
+    width: 100%;
+    position: relative; 
+    top: -130%;
+    z-index: 0;
+    border-radius: 20px;
+
+}
+
+
+.web-background-div{
+    position: relative;
+    top: -60%;
+    text-align: center;
+    z-index: 20;
+    line-height: 50px;
+    letter-spacing: 2.5px;
+}
+
+.web-background-div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.web-background-div h1{
+    font-size: 2em;
+}
+
+.web-design{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.web-image-section{
+    background-image: url("./assets/image-web-design-large.jpg");
+}
+
+.app-image-section{
+    background-image: url("./assets/image-app-design.jpg");
+   
+}
+
+.graphic-image-section{
+    background-image: url("./assets/image-graphic-design.jpg");
+}
+
+.image-overlay-app:hover{
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+}
+
+.image-overlay-graphics:hover{
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+}
+
+.image-overlay:hover {
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+}
+
+.web-background-div:hover ~ .image-overlay{
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+} 
+
+.web-background-div:hover ~ .image-overlay-app{
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+}
+
+.web-background-div:hover ~ .image-overlay-graphics{
+    background-color: hsl(11, 73%, 66%);
+    transition: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,19 +304,21 @@ main{
     font-size: 0.9em;
     padding: 0;
     text-align: center;
+    z-index: 1;
  }
 
  .hero-section{
     border-radius: 0; 
-    height: 800px;
+    height: 870px;
     width: 100%;
     justify-content: center;
+    gap: 70px;
     border-radius: 15px;
  }
 
  .hero-section img{
-    top:-8%;
-    left: 3%;
+    top:0%;
+    z-index: 0;
  }
 }
 
@@ -181,14 +334,12 @@ main{
     width: 100%;
  }
 
-.hero-texts{
+ .hero-texts{
     top: 10%;
     font-size: 0.75em;
     padding: 0;
     text-align: center;
  }
-
-
 
  .hero-texts p{
     font-size: 1.15em;
@@ -202,8 +353,34 @@ main{
     justify-content: center;
  }
 
- .hero-section img{
-    left: 4.8%;
+ .skills-section{
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows:repeat(3, 300px);
+    grid-gap: 30px;
+    padding: 0em 2em;
  }
 
+ .web-design{
+    grid-row-start: 1;
+    grid-row-end: 1;
+ }
+
+ .image-overlay{
+    top:-133%;
+ }
+
+ .image-overlay-app{
+    top:-133.5%;
+ }
+
+ .image-overlay-graphics{
+    top: -133.4%;
+ }
 }
+
+@media (max-width:394px){
+    .image-overlay-graphics{
+        top: -150%;
+    }
+}
+

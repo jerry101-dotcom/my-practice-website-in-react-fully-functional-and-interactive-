@@ -32,7 +32,6 @@ const App = () => {
               <img className="brand-logo" src={brandLogo} alt="Brand-Logo" />
               {/* */}
             </Link>
-            {windowWidth}
             {windowWidth >= 800 ? (
               <nav>
                 <Link to="/about">ABOUT US</Link>
