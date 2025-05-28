@@ -57,8 +57,8 @@ function Home() {
 
         <Link className="graphic-design">
           <div className="graphic-image-section image"> </div>
-            <div className="web-background-div">
-              <h1>GRAPHIC DESIGN</h1>
+            <div className="web-background-div graphic-text">
+              <h1 className="graphic-h">GRAPHIC DESIGN</h1>
               <span><p>View projects</p><FiArrowRight /></span>
             </div>
             <div className="image-overlay-graphics"></div>

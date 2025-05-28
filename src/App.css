@@ -87,7 +87,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    gap: 150px;
+    gap: 100px;
 }
 
 .hero-section{
@@ -366,21 +366,42 @@ main{
  }
 
  .image-overlay{
-    top:-133%;
+    top:-133.4%;
  }
 
  .image-overlay-app{
-    top:-133.5%;
+    top:-133.4%;
  }
 
  .image-overlay-graphics{
     top: -133.4%;
  }
+
 }
 
 @media (max-width:394px){
     .image-overlay-graphics{
-        top: -150%;
+        top: -133.4%;
+    }
+
+    .web-background-div h1{
+        font-size: 1.7em;
     }
 }
+
+@media (max-width:360px){
+    .graphic-text{
+        padding: 0em 0.5em;
+    }
+
+   .web-background-div h1{
+        font-size: 1.4em;
+    }
+
+    .web-background-div span{
+        font-size: 0.8em;
+    }
+}
+
+
 
