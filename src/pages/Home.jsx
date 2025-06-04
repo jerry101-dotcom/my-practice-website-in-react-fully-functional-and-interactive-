@@ -1,17 +1,28 @@
 import { Link } from "react-router-dom";
 import heroImage from "../assets/image-hero-phone .png";
-import { FiArrowRight } from "react-icons/fi"
+import { FiArrowRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
-
+import { attitudeDiv } from "../data";
 
 function Home() {
-  const [screenSize, setScreenSize] = useState(window.innerWidth)
-  useEffect(()=>{
-    window.addEventListener("resize", ()=>{
-      setScreenSize(window.innerWidth)
-    })
-  }, [screenSize])
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+    });
+  }, [screenSize]);
 
+  const illustrations = attitudeDiv.map((item) => {
+    return (
+      <div key={item} className="illustration-div">
+        <img src={item.image} alt={item.alt} />
+        <p className="illustration-p">{item.habit}</p>
+        <p className="illustration-text">
+         {item.text}
+        </p>
+      </div>
+    );
+  });
   return (
     <main>
       <section className="hero-section">
@@ -35,34 +46,45 @@ function Home() {
         <img src={heroImage} alt="hero-image" />
       </section>
       <section className="skills-section">
-        
         <Link className="web-design">
-            <div className="web-image-section image"></div>
-             <div className="web-background-div">
-              <h1>WEB DESIGN</h1>
-              <span><p>View projects</p><FiArrowRight /></span>
-            </div>
-            <div className="image-overlay"></div>
-           
+          <div className="web-image-section image"></div>
+          <div className="web-background-div">
+            <h1>WEB DESIGN</h1>
+            <span>
+              <p>View projects</p>
+              <FiArrowRight />
+            </span>
+          </div>
+          <div className="image-overlay"></div>
         </Link>
 
         <Link className="app-design">
-            <div className="app-image-section image"> </div>
-            <div className="web-background-div">
-              <h1>APP DESIGN</h1>
-              <span><p>View projects</p><FiArrowRight /></span>
-            </div>
-            <div className="image-overlay-app"></div>
+          <div className="app-image-section image"> </div>
+          <div className="web-background-div">
+            <h1>APP DESIGN</h1>
+            <span>
+              <p>View projects</p>
+              <FiArrowRight />
+            </span>
+          </div>
+          <div className="image-overlay-app"></div>
         </Link>
 
         <Link className="graphic-design">
           <div className="graphic-image-section image"> </div>
-            <div className="web-background-div graphic-text">
-              <h1 className="graphic-h">GRAPHIC DESIGN</h1>
-              <span><p>View projects</p><FiArrowRight /></span>
-            </div>
-            <div className="image-overlay-graphics"></div>
+          <div className="web-background-div graphic-text">
+            <h1 className="graphic-h">GRAPHIC DESIGN</h1>
+            <span>
+              <p>View projects</p>
+              <FiArrowRight />
+            </span>
+          </div>
+          <div className="image-overlay-graphics"></div>
         </Link>
+      </section>
+
+      <section className="attitudes">
+        {illustrations}
       </section>
     </main>
   );

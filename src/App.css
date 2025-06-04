@@ -277,6 +277,36 @@ main{
     transition: 1.5s;
 }
 
+.attitudes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:40px;
+    
+}
+.illustration-div{
+    height: 410px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.illustration-text{
+    color: rgb(64, 64, 64);
+    font-size: 0.9em;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+}
+
+.illustration-p{
+    font-size: 1.3em;
+    letter-spacing: 3.3px;
+}
+
+
+
 
 
 
@@ -375,6 +405,16 @@ main{
 
  .image-overlay-graphics{
     top: -133.4%;
+ }
+
+ .attitudes{
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 250px;
+    place-items: center;
+ }
+
+ .illustration-div{
+    width: 80%;
  }
 
 }
