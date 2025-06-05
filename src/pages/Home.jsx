@@ -17,9 +17,7 @@ function Home() {
       <div key={item} className="illustration-div">
         <img src={item.image} alt={item.alt} />
         <p className="illustration-p">{item.habit}</p>
-        <p className="illustration-text">
-         {item.text}
-        </p>
+        <p className="illustration-text">{item.text}</p>
       </div>
     );
   });
@@ -82,10 +80,19 @@ function Home() {
           <div className="image-overlay-graphics"></div>
         </Link>
       </section>
+      <section className="attitudes">{illustrations}</section>
+      <seection className="get-in-touch">
+        <div className="git-text">
+          <h1>Let’s talk about<br></br>your project</h1>
+          <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+        </div>
 
-      <section className="attitudes">
-        {illustrations}
-      </section>
+        <Link to="/contact" className="hero-link">
+          <button aria-label="Contact-us" className="hero-button">
+            GET IN TOUCH
+          </button>
+        </Link>
+      </seection>
     </main>
   );
 }

@@ -21,6 +21,6 @@ export const attitudeDiv = [
     alt: "friendly",
     habit: "FRIENDLY",
     text: "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
-  },
+  }
 ];
 

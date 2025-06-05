@@ -132,6 +132,12 @@ main{
     cursor: pointer;
 }
 
+.hero-button:hover{
+    background-color: hsl(11, 96%, 79%);
+    color: white;
+    transition: .5s;
+}
+
 .hero-section img{
     width: 300px;
     position: relative;
@@ -306,6 +312,28 @@ main{
 }
 
 
+.get-in-touch{
+    background-color: hsl(11, 73%, 66%);
+    width: 100%;
+    height: 250px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+.git-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 490px;
+}
+
+.git-text p{
+ line-height: 28px;
+}
+
 
 
 
@@ -417,6 +445,21 @@ main{
     width: 80%;
  }
 
+ .get-in-touch{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.8em 0em;
+    margin-top: -100px;
+    height: 350px;
+ }
+
+ .git-text{
+    text-align: center;
+    width: 90%;
+    gap:17px;
+ }
+
 }
 
 @media (max-width:394px){
@@ -426,6 +469,14 @@ main{
 
     .web-background-div h1{
         font-size: 1.7em;
+    }
+
+    .git-text h1{
+        font-size: 1.8em;
+    }
+
+    .git-text p{
+        font-size: 0.9em;
     }
 }
 
