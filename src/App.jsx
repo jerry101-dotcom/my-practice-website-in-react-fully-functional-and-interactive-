@@ -8,6 +8,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact";
 import { FaBars } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -58,13 +59,14 @@ const App = () => {
             </nav>
           </section>
         ) : null}
-
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/location" element={<Location />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </StrictMode>
   );

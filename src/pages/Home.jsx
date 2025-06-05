@@ -1,20 +1,13 @@
 import { Link } from "react-router-dom";
 import heroImage from "../assets/image-hero-phone .png";
 import { FiArrowRight } from "react-icons/fi";
-import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid"
 import { attitudeDiv } from "../data";
 
 function Home() {
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setScreenSize(window.innerWidth);
-    });
-  }, [screenSize]);
-
   const illustrations = attitudeDiv.map((item) => {
     return (
-      <div key={item} className="illustration-div">
+      <div key={uuidv4()} className="illustration-div">
         <img src={item.image} alt={item.alt} />
         <p className="illustration-p">{item.habit}</p>
         <p className="illustration-text">{item.text}</p>
@@ -81,7 +74,7 @@ function Home() {
         </Link>
       </section>
       <section className="attitudes">{illustrations}</section>
-      <seection className="get-in-touch">
+      <section className="get-in-touch">
         <div className="git-text">
           <h1>Let’s talk about<br></br>your project</h1>
           <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
@@ -92,7 +85,7 @@ function Home() {
             GET IN TOUCH
           </button>
         </Link>
-      </seection>
+      </section>
     </main>
   );
 }
