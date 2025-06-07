@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from "react";
 import "./App.css";
-import brandLogo from "./assets/logo-dark.png";
+import brandLogo from "./assets/logo-dark.webp";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Location from "./pages/Location";
@@ -33,6 +33,7 @@ const App = () => {
               <img className="brand-logo" src={brandLogo} alt="Brand-Logo" />
               {/* */}
             </Link>
+            {windowWidth}
             {windowWidth >= 800 ? (
               <nav>
                 <Link to="/about">ABOUT US</Link>

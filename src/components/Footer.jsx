@@ -1,5 +1,5 @@
 import React from "react";
-import brandLogo from "../assets/logo-light.png";
+import brandLogo from "../assets/logo-light.webp";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaYoutube, FaTwitter, FaPinterest, FaInstagram } from "react-icons/fa"
 

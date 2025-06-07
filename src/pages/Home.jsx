@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import heroImage from "../assets/image-hero-phone .png";
+import heroImage from "../assets/image-hero-phone .webp";
 import { FiArrowRight } from "react-icons/fi";
 import { v4 as uuidv4 } from "uuid"
 import { attitudeDiv } from "../data";
+import GetInTouch from "../components/get-in-touch";
 
 function Home() {
   const illustrations = attitudeDiv.map((item) => {
@@ -74,18 +75,7 @@ function Home() {
         </Link>
       </section>
       <section className="attitudes">{illustrations}</section>
-      <section className="get-in-touch">
-        <div className="git-text">
-          <h1>Let’s talk about<br></br>your project</h1>
-          <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
-        </div>
-
-        <Link to="/contact" className="hero-link">
-          <button aria-label="Contact-us" className="hero-button">
-            GET IN TOUCH
-          </button>
-        </Link>
-      </section>
+      <GetInTouch />
     </main>
   );
 }
