@@ -368,7 +368,7 @@ footer {
   font-size: 1.5em;
 }
 
-.about-us {
+.about-us, .contact-page {
   width: 100%;
   height: 480px;
   background-color: hsl(11, 73%, 66%);
@@ -380,15 +380,15 @@ footer {
   border-radius: 15px;
 }
 
-.first-section-text h1 {
+.first-section-text h1, .contact-us h1 {
   font-size: 2.8em;
 }
 
-.first-section-text p {
+.first-section-text p, .contact-us p {
   line-height: 27px;
 }
 
-.first-section-text {
+.first-section-text, .contact-us{
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -438,6 +438,10 @@ footer {
   gap: 30px;
 }
 
+.t-r-d-text{
+  right: -5%;
+}
+
 .w-c-t-text h1 {
   color: hsl(11, 73%, 66%);
   font-size: 2.2em;
@@ -447,14 +451,116 @@ footer {
   line-height: 27px;
 }
 
+.location-btn{
+  background-color: hsl(11, 73%, 66%);
+  color: #fdf3f0;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+
+}
+.location-page-section{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.location-details{
+  border-radius: 15px;
+  background-color: #fdf3f0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 5.5em;
+}
+
+.location-details h1{
+  font-size: 2.15em;
+  color: hsl(11, 73%, 66%);
+}
+
+.location-info{
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+}
+
+.location-info div{
+  line-height: 25px;
+}
+
+.location-image-wrapper{
+  object-fit: contain;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.contact-form{
+  height: 100%;
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact-form div{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+input::placeholder{
+  font-weight: 400;
+  color: hsl(11, 92%, 85%);
+}
+input{
+  outline: none;
+}
+.name-input, .email-input, .tel-input, .message-input{
+  width: 90%;
+  font-size: 1em;
+  overflow-wrap: break-word;
+  background: hsl(11, 73%, 66%);
+  border: none;
+  border-bottom: 1px solid white;
+  color: aliceblue;
+  padding:2em 1em 0.5em 1em ;
+}
+
+.message-input{
+  padding:2em 1em 2em 1em ;
+}
+
+.isNotSubmitted, .isSubmitted{
+  background-color: white;
+  color: red;
+  font-size: 0.8em;
+  width: 70%;
+  border-radius: 15px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isSubmitted{
+color:green;
+}
 @media (max-width: 1188px) {
-  .about-us {
+  .about-us, .location-page-section {
     flex-direction: column-reverse;
     width: 690px;
     height: 720px;
   }
 
-  .image-wrapper {
+  .contact-page{
+    flex-direction: column;
+  }
+
+  .image-wrapper, .contact-form {
     width: 100%;
     height: 50%;
   }
@@ -468,6 +574,10 @@ footer {
     padding: 0em 2em;
     justify-content: center;
     font-size: 0.85em;
+  }
+
+  .contact-us{
+    text-align: left;
   }
 
   .world-class-talent {
@@ -492,6 +602,27 @@ footer {
     top: 0%;
     right: 0%;
   }
+
+  .the-real-deal{
+    flex-direction: column;
+  }
+
+  .location-details{
+    height: 50%;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .location-image-wrapper{
+    width: 100%;
+    object-fit: cover;
+    height: 50%;
+  }
+
+  .location-image-wrapper img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -515,6 +646,12 @@ footer {
   .hero-section img {
     top: 0%;
     z-index: 0;
+  }
+}
+
+@media (max-width: 866px){
+  .location-p{
+    font-size: 1em;
   }
 }
 @media (max-width: 800px) {
@@ -627,6 +764,35 @@ footer {
 
   .w-c-t-text{
     max-width: 90%;
+  }
+
+  .location-p{
+    margin-top: -30px;
+  }
+  .location-div{
+    margin-top: -100px;
+  }
+
+  .location-section{
+    margin-top: 0px;
+  }
+
+  .location-page-section{
+    width: 100%;
+  }
+
+  .location-details, .location-image-wrapper{
+    border-radius: 0px;
+  }
+
+  .location-details{
+    margin-top: 0px;
+  }
+
+  .location-info{
+    width: 80%;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }
 
