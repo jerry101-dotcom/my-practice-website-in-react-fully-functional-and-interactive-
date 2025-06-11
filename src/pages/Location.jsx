@@ -1,9 +1,10 @@
 import { locationInfoArray } from "../data";
 import GetInTouch from "../components/get-in-touch"
+import { v4 as uuidv4 } from "uuid"
 function Location() {
   const locationArrayInfo = locationInfoArray.map((item) => {
     return (
-      <section className="location-page-section">
+      <section key={uuidv4()} className="location-page-section">
         <div className="location-details">
           <h1>{item.country}</h1>
           <div className="location-info">

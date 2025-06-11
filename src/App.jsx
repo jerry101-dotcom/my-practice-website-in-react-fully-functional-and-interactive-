@@ -9,6 +9,9 @@ import Contact from "./pages/Contact";
 import { FaBars } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 import Footer from "./components/Footer";
+import WebPage from "./pages/webpages";
+import AppPage from "./pages/AppPages";
+import DesignPage from "./pages/DesignPages";
 
 const App = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -40,7 +43,11 @@ const App = () => {
                 <Link to="/contact">CONTACT</Link>
               </nav>
             ) : (
-              <button aria-label={navBar ? "close-icon" : "list-menu"} onClick={handleBar} className="navbar-button">
+              <button
+                aria-label={navBar ? "close-icon" : "list-menu"}
+                onClick={handleBar}
+                className="navbar-button"
+              >
                 {navBar ? (
                   <FiX className="close-icon" />
                 ) : (
@@ -59,12 +66,15 @@ const App = () => {
             </nav>
           </section>
         ) : null}
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/location" element={<Location />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/web-design" element={<WebPage />} />
+          <Route path="/app-design" element={<AppPage />} />
+          <Route path="/graphic-design" element={<DesignPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

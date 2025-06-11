@@ -90,6 +90,7 @@ main {
   gap: 100px;
 }
 
+
 .hero-section {
   background-color: hsl(11, 73%, 66%);
   border-radius: 15px;
@@ -323,6 +324,7 @@ footer {
   border: 1px solid black;
   background-color: rgb(23, 23, 23);
   overflow: hidden;
+  z-index: -30;
 }
 
 .footer-div {
@@ -461,7 +463,7 @@ footer {
 .location-page-section{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .location-details{
@@ -534,21 +536,97 @@ input{
   padding:2em 1em 2em 1em ;
 }
 
-.isNotSubmitted, .isSubmitted{
-  background-color: white;
-  color: red;
-  font-size: 0.8em;
-  width: 70%;
+.web-page{
+  width: 100%;
+  height: 220px;
+  background-color: hsl(11, 73%, 66%);
   border-radius: 15px;
-  height: 25px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
-.isSubmitted{
-color:green;
+.web-page h1{
+  font-size: 2.3em;
 }
+.web-page p{
+  text-align: center;
+  width: 400px;
+  font-size: 0.95em;
+  line-height: 26px;
+}
+
+.web-design-lists{
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.web-design-list-section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.web-item{
+  height: 440px;
+  border-radius: 15px;
+  overflow: hidden;
+  color: aliceblue;
+  width: 359px;
+  background-color: hsl(11, 73%, 66%);
+}
+
+.first-p{
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+.web-item:hover{
+  background-color: hsl(11, 96%, 28%);
+  color: white; 
+  transition: 0.5s;
+}
+
+.web-item-image{
+  width: 100%;
+  height: 70%;
+}
+
+
+
+.second-p{
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+}
+
+.project-details{
+  text-align: center;
+  width: 80%;
+  justify-self: center;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.other-skills{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.w-s-c{
+margin-bottom: -350px;
+}
+
 @media (max-width: 1188px) {
   .about-us, .location-page-section {
     flex-direction: column-reverse;
@@ -794,6 +872,18 @@ color:green;
     gap: 20px;
     flex-wrap: wrap;
   }
+
+  .web-page{
+    border-radius: 0px;
+  }
+
+  .web-page p{
+    width: 80%;
+  }
+
+  .w-s-c{
+  margin-bottom:  0px;
+}
 }
 
 @media (max-width: 450px) {
@@ -864,5 +954,9 @@ color:green;
 
   .web-background-div span {
     font-size: 0.8em;
+  }
+
+  .web-item{
+    width: 300px;
   }
 }

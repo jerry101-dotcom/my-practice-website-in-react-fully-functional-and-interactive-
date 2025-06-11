@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import SeeLocation from "../components/see-location"
 function Contact() {
 
@@ -9,11 +8,10 @@ function Contact() {
     const message = formData.get("message")
 
     if(name && email && phone && message){
-      alert("Your form is Submitted")
+      alert("Your form has been submitted")
     }else if(!name || !email || !phone || !message){
-      alert("Plese Fill all the inputs")
+      alert("Plese Fill all areas in the form")
     }
-    
   }
   return (
     <main>

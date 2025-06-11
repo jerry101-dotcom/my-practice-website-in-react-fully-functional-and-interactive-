@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
 import heroImage from "../assets/image-hero-phone .webp";
 import { FiArrowRight } from "react-icons/fi";
-import { v4 as uuidv4 } from "uuid"
+import { v4 as uuidv4 } from "uuid";
 import { attitudeDiv } from "../data";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 import GetInTouch from "../components/get-in-touch";
 
 function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
+
   const illustrations = attitudeDiv.map((item) => {
     return (
       <div key={uuidv4()} className="illustration-div">
@@ -17,8 +25,8 @@ function Home() {
   });
   return (
     <main>
-      <section className="hero-section">
-        <div className="hero-texts">
+      <section data-aos="fade-in" className="hero-section">
+        <div data-aos="fade-left" className="hero-texts">
           <h1>
             Award-winning custom<br></br>designs and digital<br></br>branding
             solutions
@@ -38,7 +46,7 @@ function Home() {
         <img src={heroImage} alt="hero-image" />
       </section>
       <section className="skills-section">
-        <Link className="web-design">
+        <Link data-aos="fade-out" to="/web-design" className="web-design">
           <div className="web-image-section image"></div>
           <div className="web-background-div">
             <h1>WEB DESIGN</h1>
@@ -50,7 +58,7 @@ function Home() {
           <div className="image-overlay"></div>
         </Link>
 
-        <Link className="app-design">
+        <Link data-aos="fade-in"  to="/app-design" className="app-design">
           <div className="app-image-section image"> </div>
           <div className="web-background-div">
             <h1>APP DESIGN</h1>
@@ -62,7 +70,7 @@ function Home() {
           <div className="image-overlay-app"></div>
         </Link>
 
-        <Link className="graphic-design">
+        <Link data-aos="fade-in"  to="/graphic-design" className="graphic-design">
           <div className="graphic-image-section image"> </div>
           <div className="web-background-div graphic-text">
             <h1 className="graphic-h">GRAPHIC DESIGN</h1>
